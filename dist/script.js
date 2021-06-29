@@ -1,16 +1,18 @@
 
+//Get all the elements with data-scroll attr.
 const items = document.querySelectorAll('[data-scroll]');
-
+//option to pass in Inter. Sec obs
 const option = {
-    root : null,
-    threshold : '0.2',
-    rootMargin : '0px 0px -200px 0px'
+    root : null, // null => viewport
+    threshold : '0.2', //0.2 part of element shoud appear atleast in viewport then animate
+    rootMargin : '0px 0px -200px 0px' // margin from viewport
 };
 
 const slidein = new IntersectionObserver( (entries, slidein) => {
     entries.forEach( entry=>{
-        if(!entry.isIntersecting)
+        if(!entry.isIntersecting) //if element not intersectobg with viewport then do nothing
             return;
+        //animate as intersect with viewport
         entry.target.style.opacity = 1;
         entry.target.style.transform = 'translate(0,0)';
     } )
@@ -22,7 +24,7 @@ items.forEach( item =>{
 });
 
 
-
+//Get all the <img> with data-src attr.
 const lazyImages = document.querySelectorAll('[data-src]');
 
 const option2 = {
