@@ -1,0 +1,23 @@
+[data-scroll="fromRight"] {
+    -webkit-transform: translateX(30%);
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  
+  [data-scroll="fromLeft"] {
+    -webkit-transform: translateX(-30%);
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  
+  [data-scroll="fromTop"] {
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  
+  [data-scroll="fromBottom"] {
+    -webkit-transform: translateY(30%);
+    transform: translateY(30%);
+    opacity: 0;
+  }
